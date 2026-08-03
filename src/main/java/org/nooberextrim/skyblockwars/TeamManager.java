@@ -4,6 +4,9 @@ import org.bukkit.entity.Player;
 
 import java.util.*;
 
+// TODO :: add clearTeams for removing all players from all teams
+// TODO :: make a way to join a random team
+
 public class TeamManager {
     private final List<Team> teams;
 

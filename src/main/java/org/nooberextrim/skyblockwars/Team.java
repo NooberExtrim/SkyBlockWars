@@ -34,10 +34,14 @@ public class Team {
         return players.contains(player);
     }
 
+    public boolean isFull() {
+        return players.size() >= maxPlayers;
+    }
+
     public boolean addPlayer(Player player) {
         Objects.requireNonNull(player, "Player cannot a null value");
 
-        if(players.size() >= maxPlayers) {
+        if(isFull()) {
             return false;
         }
         if(containsPlayer(player)) {
