@@ -28,6 +28,14 @@ public class TeamManager {
                 .findFirst();
     }
 
+    public Optional<Team> findTeamByName(String name) {
+        Objects.requireNonNull(name, "name can not be a null value");
+
+        return teams.stream()
+                .filter(team -> team.getName().equals(name))
+                .findFirst();
+    }
+
     public boolean isPlayerInTeam(Player player) {
         return findTeam(player).isPresent();
     }
