@@ -13,15 +13,11 @@ import java.util.Objects;
 public class SkyblockCommand implements CommandExecutor {
 
     private final TeamManager teamManager;
-    private final Game game;
 
-
-    public SkyblockCommand(TeamManager teamManager, Game game) {
+    public SkyblockCommand(TeamManager teamManager) {
         Objects.requireNonNull(teamManager, "teamManager can not be null");
-        Objects.requireNonNull(game, "game can not be null");
 
         this.teamManager = teamManager;
-        this.game = game;
     }
 
     @Override
